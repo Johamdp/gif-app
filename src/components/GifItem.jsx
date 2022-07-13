@@ -22,7 +22,7 @@ export const GifItem = ({title, url}) => {
 
     return(
         <div className="card">
-            <p>{title}</p>
+            <p data-testid='test-title'>{title}</p>
             <img src ={url} alt ="gif"/>
             <button className="download" onClick={handleClick}>Descargar</button>
         </div>

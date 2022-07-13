@@ -28,7 +28,7 @@ describe ('Test en <GifGrid/>', ()=>{
     test ('Debe mostrar items, cuando se cargan las imagenes en useFetchGids', () =>{
          
         useFetchGif.mockReturnValue({
-            Imagenes:[
+            imagenes:[
                 {id:'ABC123', title: 'Saitama', url: 'https://onepunch/saitama.jpg'},
                 {id:'ABC333', title: 'Garou', url: 'https://onepunch/garou.jpg'}
             ],
