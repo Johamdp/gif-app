@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { GifItem } from "../../src/components/GifItem";
 
 
@@ -35,14 +35,24 @@ describe('Test en <GifItem />', () => {
         
         render( <GifItem title={title} url={url} /> )
 
-        // screen.debug();
+        screen.debug();
            
         const {src, alt} = screen.getByRole( 'img' );
         expect( src ).toContain(url);
         expect( alt ).toContain('gif');
     });
 
+    test('Verificar el boton de Descargar', () => {
 
+        const {getByTestId} = screen;
+
+        const buttonDow = getByTestId('Button Dow');       
+        
+        fireEvent.click(buttonDow);
+            
+        expect(buttonDow).toBeTruthy();
+        
+    });
 
 
 

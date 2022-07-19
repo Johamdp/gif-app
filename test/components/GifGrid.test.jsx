@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { GifGrid } from "../../src/components/GifGrid";
 import { useFetchGif } from "../../src/hooks/useFetchGif";
 
@@ -39,5 +39,17 @@ describe ('Test en <GifGrid/>', ()=>{
 
         expect (screen.getAllByRole ('img').length).toBe(2)
   
+    });
+
+    test('Verificar el boton de Eliminar', () => {
+
+        const {getByTestId} = screen;
+
+        const buttonD = getByTestId('Button D');       
+        
+        fireEvent.click(buttonD);
+            
+        expect(buttonD).toBeTruthy();
+        
     });
 });

@@ -26,7 +26,7 @@ export const GifApp=()=>{
       <AddCategory addCategory={handleAddCategory}/>
 
     {/*Listado de Gif*/}    
-    <button className="reset" onClick={handleRemoveAll}>Reset</button>     
+    <button className="reset" data-testid="Button R" onClick={handleRemoveAll}>Reset</button>     
     
     {categories.map((category) => <GifGrid key={category} category={category} handleOnRemove={handleOnRemove}/>)}        
     </>

@@ -13,7 +13,7 @@ export const GifGrid =({category, handleOnRemove})=>{
     <div className="grid-container">
       <div className="title-container">
         <h3>{category}</h3> 
-        <button className="delete" onClick={() => handleOnRemove(category)}>Eliminar</button> 
+        <button className="delete" data-testid="Button D" onClick={() => handleOnRemove(category)}>Eliminar</button> 
       </div>
 
 

@@ -24,7 +24,7 @@ export const GifItem = ({title, url}) => {
         <div className="card">
             <p data-testid='test-title'>{title}</p>
             <img src ={url} alt ="gif"/>
-            <button className="download" onClick={handleClick}>Descargar</button>
+            <button className="download" data-testid="Button Dow" onClick={handleClick}>Descargar</button>
         </div>
     )
 }   
