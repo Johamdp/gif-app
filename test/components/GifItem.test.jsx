@@ -44,7 +44,7 @@ describe('Test en <GifItem />', () => {
 
     test('Verificar el boton de Descargar', () => {
 
-        const {getByTestId} = screen;
+        const {getByTestId} = render( <GifItem title={title} url={url} />);
 
         const buttonDow = getByTestId('Button Dow');       
         

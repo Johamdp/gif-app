@@ -43,7 +43,7 @@ describe ('Test en <GifGrid/>', ()=>{
 
     test('Verificar el boton de Eliminar', () => {
 
-        const {getByTestId} = screen;
+        const {getByTestId} =  render (<GifGrid category ={category} handleOnRemove={()=>{}}/>);
 
         const buttonD = getByTestId('Button D');       
         
